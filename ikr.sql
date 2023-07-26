@@ -154,6 +154,8 @@ SELECT * FROM young_animals;
 12. Объединить все таблицы в одну, при этом сохраняя поля, указывающие на
 прошлую принадлежность к старым таблицам.
 */
+DROP TABLE IF EXISTS tbl_animals_total;
+CREATE TEMPORARY TABLE tbl_animals_total
 SELECT 
 	an.name AS 'animals.name', 
     ac.class AS 'anim_class.class',
@@ -168,5 +170,7 @@ JOIN animals an ON an.id = animal_id
 JOIN anim_class ac ON ac.id = an.class_id 
 JOIN species sp ON sp.id = ac.species_id
 JOIN skills sk ON sk.id = skill_id;
+
+SELECT * FROM tbl_animals_total;
 
 
