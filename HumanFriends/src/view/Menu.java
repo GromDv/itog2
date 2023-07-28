@@ -13,7 +13,7 @@ public class Menu {
     public String toString() {
         StringBuilder sb = new StringBuilder("");
         sb.append("=======================================\n");
-        sb.append("Чтобы выполнить операцию введите номер:\n");
+        sb.append("Для выбора введите номер:\n");
         for (MenuPoint pm : this.menu) {
             sb.append(pm.getId() + " - " + pm.getTitle() + "\n");
         }
@@ -25,11 +25,15 @@ public class Menu {
         this.menu.add(mp);
     }
 
-    public MenuPoint getMenuPointById(int num) {
+    public MenuPoint getMenuPointById(int num, int defNum) {
         for (MenuPoint pm : this.menu) {
             if (pm.getId() == num)
                 return pm;
         }
-        return null;
+        for (MenuPoint pm : this.menu) {
+            if (pm.getId() == defNum)
+                return pm;
+        }
+        return this.menu.get(0);
     }
 }
