@@ -22,15 +22,27 @@ public class View {
         sc.nextLine();
         return res;
     }
+    public int getUserChoice(String ppm) {
+        System.out.print(ppm);
+        int res;
+        try {
+            res = sc.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Введено что-то не то, попробуйте ещё раз!");
+            res = -1;
+        }
+        sc.nextLine();
+        return res;
+    }
 
-    public String getUserExpression() {
+    public String getUserExpression(String mess) {
         String res;
-        System.out.print("Введите выражение : ");
+        System.out.print(mess);
         res = sc.nextLine();
         return res.trim();
     }
 
     public void ShowString(String res) {
-        System.out.printf("Результат: %s\n\n", res);
+        System.out.printf("\n\t>>>: %s\n\n", res);
     }
 }

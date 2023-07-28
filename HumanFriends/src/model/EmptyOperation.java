@@ -6,7 +6,7 @@ public class EmptyOperation extends Operation {
 
     @Override
     public String execute(View vw, Zoo mz) {
-        return "Пустая операция (пока)";
+        return "Пустая операция (пока), попробйте другую...";
     }
 }
 
