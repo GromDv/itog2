@@ -1,6 +1,7 @@
 package controller;
 
 import model.*;
+import model.operations.*;
 import view.*;
 
 public class controller {

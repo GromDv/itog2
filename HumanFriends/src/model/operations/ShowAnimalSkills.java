@@ -1,9 +1,11 @@
-package model;
+package model.operations;
 
+import model.Zoo;
 import model.animals.Animal;
+import model.operations.Operation;
 import view.View;
 
-public class ShowAnimalSkills extends Operation{
+public class ShowAnimalSkills extends Operation {
     @Override
     public String execute(View vw, Zoo mz) {
         if (mz.getQtyAnimals() > 0) {

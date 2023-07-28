@@ -1,5 +1,6 @@
-package model;
+package model.operations;
 
+import model.Zoo;
 import model.animals.Animal;
 import view.View;
 

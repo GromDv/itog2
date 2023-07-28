@@ -1,6 +1,7 @@
-package model;
+package model.operations;
 
 import model.Interfaces.Execute;
+import model.Zoo;
 import view.View;
 
 public class Operation implements Execute {
