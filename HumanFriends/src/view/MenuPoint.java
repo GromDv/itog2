@@ -1,7 +1,7 @@
 package view;
 
 import model.Interfaces.Execute;
-import model.Operation;
+import model.operations.Operation;
 import model.Zoo;
 
 public class MenuPoint implements Execute {

@@ -1,8 +1,9 @@
-package model;
+package model.operations;
 
+import model.Zoo;
 import view.View;
 
-public class AddNewAnimal extends Operation{
+public class AddNewAnimal extends Operation {
 
     @Override
     public String execute(View vw, Zoo mz) {
